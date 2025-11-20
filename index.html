@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrightMart Interactive Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>Welcome to BrightMart!</h1>
+    <!-- Button to toggle dark/light mode -->
+    <button id="themeBtn">Toggle Dark Mode</button>
+  </header>
+
+  <main>
+    <!-- ===== CSS + JS Animated Box ===== -->
+    <section class="card">
+      <h2>Flash Sale!</h2>
+      <div id="saleBox" class="sale-box">50% OFF!</div>
+      <!-- Clicking this triggers a JS function to animate the box -->
+      <button onclick="animateSaleBox()">Animate Box</button>
+    </section>
+
+    <!-- ===== Visitor Counter ===== -->
+    <section class="card">
+      <h2>Daily Visitors</h2>
+      <button id="visitBtn">I’m Visiting!</button>
+      <p>Visitors Today: <span id="visitCount">0</span></p>
+    </section>
+
+    <!-- ===== Sign Up Form ===== -->
+    <section class="card">
+      <h2>Sign Up for Promotions</h2>
+      <form id="signupForm">
+        <label>
+          Name:
+          <input type="text" id="name" placeholder="Enter your name">
+          <span class="error" id="nameError"></span>
+        </label>
+        <label>
+          Email:
+          <input type="email" id="email" placeholder="Enter your email">
+          <span class="error" id="emailError"></span>
+        </label>
+        <label>
+          Password:
+          <input type="password" id="password" placeholder="Enter password">
+          <button type="button" id="togglePassword">Show</button>
+          <span class="error" id="passwordError"></span>
+        </label>
+        <button type="submit">Submit</button>
+        <p id="formSuccess" class="success"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BrightMart. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

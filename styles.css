@@ -1,0 +1,70 @@
+/* ===== General Page Styles ===== */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: teal;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s; /* smooth color change for dark mode */
+}
+
+body.dark-mode {
+  background-color: #222;
+  color: #eee;
+}
+
+/* ===== Button Styles ===== */
+button {
+  cursor: pointer;
+  padding: 8px 16px;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-color: #eee;
+  transition: background-color 0.3s, transform 0.2s; /* transition for hover effects */
+}
+button:hover { 
+  background-color: #ddd; 
+  transform: scale(1.05);
+}
+
+/* ===== Card Sections ===== */
+.card {
+  background-color: #e0f7f7;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.card:hover { transform: translateY(-5px); }
+
+/* ===== Sale Box Animation ===== */
+.sale-box {
+  width: 150px;
+  height: 100px;
+  background-color: #ffd700;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: transform 0.5s, background-color 0.5s; /* CSS transitions */
+}
+
+.sale-box.animate {
+  transform: rotate(20deg) scale(1.2); /* transform animation */
+  background-color: #ff1a1a;
+}
+
+/* ===== Form Inputs & Messages ===== */
+input { padding: 8px; margin-top: 5px; width: 100%; box-sizing: border-box; }
+.error { color: red; font-size: 0.9em; display: block; }
+.success { color: green; font-weight: bold; }
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 768px) {
+  body { padding: 10px; }
+  .card { padding: 15px; }
+  button { width: 100%; margin-top: 10px; }
+}
